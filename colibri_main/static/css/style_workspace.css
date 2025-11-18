@@ -109,16 +109,24 @@ body{
     padding: 20px;
 }
 
-.main .box{
+
+
+.main .box-link{
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
     align-items: center;
-    height: 200px;
+    height: 220px;
     background: rgba(229, 223, 223, 0.3);
     border-radius: 5%;
-    width: 200px;
-    transition: 0.3s;
+    width: 220px;
+    cursor: pointer;
+    transition: 0.3s, box-shadow 0.3s;;
+}
+
+.main .box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 
@@ -146,3 +154,4 @@ body{
     color: #333;
     border-radius: 5%;
 }
+

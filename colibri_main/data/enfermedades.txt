@@ -1,0 +1,219 @@
+Neurología: 
+Epilepsia – Trastorno caracterizado por actividadeléctrica anormal en el cerebro que provoca convulsiones. 
+Migraña crónica – Cefaleas intensas recurrentes que pueden acompañarse de náuseas y sensibilidad a la luz. 
+Enfermedad de Parkinson – Trastornoneurodegenerativo que afecta el movimiento y causa temblores. 
+Esclerosis múltiple –Enfermedad autoinmune que daña la mielina del sistema nervioso. 
+Neuropatía periférica –Daño en los nervios periféricos que causa entumecimiento y dolor. 
+Alzheimer – Enfermedad neurodegenerativa que provoca pérdida progresiva de memoria. 
+Neuralgia del trigémino – Dolor facial intenso causado por irritacióndel nervio trigémino. 
+Tumor cerebral – Crecimiento anormal de células dentro del cerebro.
+
+Dermatología: 
+Dermatitis atópica – Inflamación crónica de la piel que causa picazón y enrojecimiento. 
+Psoriasis – Enfermedad autoimmune que acelera el crecimiento de la piel, produciendo placas. 
+Vitiligo – Pérdida de pigmentación en áreas de la piel. 
+Dermatitis seborreica – Inflamación de zonas grasas de la piel como cara y cuero cabelludo.
+Acné quístico – Forma grave de acné con nódulos profundos y dolorosos. 
+Melanoma – Cáncer de piel que se origina en los melanocitos. 
+Urticaria crónica – Aparición repetida de ronchas conintensa picazón. 
+Impétigo – Infección bacteriana superficial muy contagiosa.
+
+Neumología: 
+Asma – Inflamación crónica de las vías respiratorias que dificulta la respiración. 
+EPOC – Enfermedad pulmonar obstructive crónica que reduce el flujo de aire. 
+Neumonía – Infección de los pulmones causada por bacterias o virus. 
+Fibrosis pulmonar – Engrosamiento y cicatrización del tejido pulmonar. 
+Tuberculosis – Infección bacteriana que afecta mayormente los pulmones. 
+Embolia pulmonar – Obstrucción arterial en los pulmones por un coágulo. 
+Bronquitis crónica – Inflamación persistente de los bronquios. 
+Apnea del sueño –Pausas respiratorias repetidas durante el sueño.
+
+Nefrología: 
+Insuficiencia renal aguda – Pérdida repentina de la función renal. 
+Insuficiencia renal crónica – Deterioro progresivo de los riñones. 
+Nefritis – Inflamación de los riñones causada por infecciones o autoinmunidad. 
+Cálculos renales – Acumulación sólida de minerales dentro de los riñones. 
+Síndrome nefrótico – Perdida excesiva de proteínas por la orina. 
+Infección urinaria – Infección del tracto urinario inferior o superior. 
+Hidronefrosis – Dilatación renal por obstrucción del flujo urinario. 
+Poliquistosis renal – Enfermedad genética que forma quistes en los riñones.
+
+Traumatología: 
+Fractura de fémur – Rotura del hueso más largo del cuerpo. 
+Luxación de hombro – Salida del húmero de su articulación.
+Escoliosis – Curvatura lateral anormal de la columna vertebral. 
+Hernia de disco – Compresión de nervios por desplazamiento del disco intervertebral. 
+Tendinitis – Inflamación de un tendón por uso excesivo. 
+Osteoartritis – Degeneración del cartílago articular que causa dolor. 
+Esguince de tobillo – Lesión del ligamento por estiramiento o desgarro.
+
+Cardiología: 
+Infarto agudo de miocardio – Bloqueo del flujo sanguíneo al corazón que causa daño tisular.
+
+Gastroenterología: 
+Gastritis – Inflamación del revestimiento delestómago. 
+Úlcera péptica  – Lesión en estómago o duodeno causada por ácido. 
+Hepatitis A – Infección viral del hígado. 
+Hepatitis B – Infección viral que puede volverse crónica. 
+Hepatitis C – Infección
+Cirrosis – Cicatrización avanzada del hígado. 
+Colitis ulcerosa – Inflamación crónica del colon. 
+Enfermedad de Crohn – Inflamación del tracto digestivo.
+Pancreatitis aguda – Inflamación repentina del páncreas. 
+Pancreatitis crónica – Daño persistente del páncreas.
+
+Endocrinología: 
+Diabetes tipo 1 – Enfermedad autoinmune del páncreas. 
+Diabetes tipo 2 – Resistencia a la insulina.
+Hipotiroidismo – Baja producción hormonal tiroidea.
+Hipertiroidismo – Exceso de hormonas tiroideas. 
+Síndrome de Cushing – Exceso de cortisol. 
+Enfermedad de Addison – Déficit de cortisol. 
+Acromegalia – Exceso de hormona de crecimiento. 
+Bocio – Crecimiento de la glándula tiroides. 
+Tiroiditis de Hashimoto – Enfermedad autoinmune tiroidea.
+Osteoporosis – Pérdida de masa ósea.
+
+Oncología:
+Cáncer de mama – Tumor maligno mamario. 
+Cáncer de próstata – Tumor en glándula prostática. 
+Cáncer de colon – Tumor del intestino grueso. 
+Cáncer de pulmón – Tumor maligno pulmonar.
+Linfoma de Hodgkin – Cáncer del sistema linfático. 
+Linfoma no Hodgkin – Tumores linfáticos malignos. 
+Leucemia – Cáncer de células sanguíneas. 
+Mieloma múltiple – Cáncer de células plasmáticas. 29.
+Cáncer de hígado – Tumor hepático maligno.
+Cáncer de páncreas –Tumor agresivo del páncreas.
+
+Reumatología:
+Artritis reumatoide – Inflamación autoimmune articular.
+Lupus – Trastorno autoinmune multisistémico.
+Espondilitis anquilosante – Inflamación de columna.
+Gota – Depósitos de ácido úrico en articulaciones.
+Fibromialgia – Dolor crónico generalizado.
+Vasculitis – Inflamación de vasos sanguíneos.
+Esclerodermia – Endurecimiento de tejidos.
+Artritis psoriásica – Inflamación asociada a psoriasis.
+Síndrome de Sjögren – Afecta glándulas mucosas.
+Polimiositis – Inflamación muscular autoinmune.
+
+Ginecología: 
+Endometriosis – Crecimiento de endometrio fuera del útero.
+Síndrome de ovario poliquístico – Desequilibrio hormonal.
+Miomas uterinos – Tumores benignos uterinos.
+Cáncer cervical – Tumor del cuello uterino.
+Cáncer de ovario – Tumor maligno ovárico.
+Menopausia – Cese de menstruación. 
+Vaginitis – Inflamación vaginal.
+Displasia cervical – Cambios celulares anormales.
+Embarazo ectópico – Implantación fuera del útero. 
+Trastorno disfórico premenstrual – Síntomas severos premenstruales.
+
+Urología: 
+Hiperplasia prostática benigna – Agrandamiento prostático.
+Prostatitis – Inflamación prostática.
+Incontinencia urinaria – Pérdida de control urinario.
+Cistitis – Inflamación de la vejiga.
+Uretritis – Inflamación de la uretra.
+Fimosis – Estrechez del prepucio. 
+Cáncer de vejiga – Tumor urinario.
+Varicocele – Dilatación venosa escrotal.
+Criptorquidia – Testículo no descendido.
+Disfunción eréctil – Dificultad de erección.
+
+Otorrinolaringología: 
+Sinusitis crónica – Inflamación prolongada de senos paranasales.
+Otitis media – Infección del oído medio.
+Otitis externa – Infección del oído externo.
+Faringitis – Inflamación de la garganta.
+Rinitis alérgica – Reacción nasal alérgica.
+Amigdalitis – Inflamación de amígdalas.
+Vértigo – Sensación de giro. 
+Hipoacusia – Disminución auditiva. 
+Desviación del tabique – Desalineación nasal.
+Laringitis – Inflamación de la laringe.
+
+Oftalmología: 
+Cataratas – Opacidad del cristalino.
+Glaucoma – Daño del nervio óptico.
+Conjuntivitis – Inflamación de conjuntiva.
+Degeneración macular – Daño a la mácula.
+Retinopatía diabética  –Daño retiniano por diabetes. 
+Miopía – Dificultad para ver de lejos.
+Hipermetropía – Dificultad para ver de cerca. 
+Astigmatismo – Curvatura irregular de córnea.
+Queratitis – Inflamación de córnea.
+Estrabismo – Desalineación ocular.
+
+Pediatría: 
+Sarampión – Infección viral contagiosa. 
+Varicela – Virus con erupciones.
+Paperas – Infección de glándulas salivales.
+Tos ferina – Tos característicamente intensa.
+Bronquiolitis – Inflamación en bebés.
+Desnutrición – Falta severa de nutrients.
+Alergias alimentarias – Reacciones a alimentos. 
+Autismo – Trastorno del neurodesarrollo. 
+TDAH – Déficit de atención.
+Cólicos infantiles – Llanto excesivo sin causa médica.
+
+Psiquiatría: 
+Depresión mayor – Tristeza persistente.
+Trastorno bipolar – Episodios maníacos y depresivos.
+Ansiedad generalizada – Preocupación excesiva. 
+Trastorno de pánico – Crisis de miedo súbito.
+Esquizofrenia – Alucinaciones y delirios.
+TOC – Pensamientos obsesivos.
+TEPT – Trauma psicológico.
+Anorexia – Trastorno alimentario.
+Insomnio crónico – Problemas persistentes de sueño.
+Fobia social – Miedo a situaciones sociales.
+
+Hematología: 
+Anemia – Déficit de glóbulos rojos.
+Trombocitopenia – Plaquetas bajas.
+Hemofilia – Trastorno de coagulación. 
+Anemia hemolítica – Destrucción de glóbulos rojos.
+Policitemia – Exceso de glóbulos rojos.
+Talasemia – Enfermedad genética de hemoglobina. 
+PTI – Destrucción inmune de plaquetas.
+Síndrome mielodisplásico – Producción defectuosa de células.
+Linfedema – Acumulación de linfa.
+Neutropenia – Neutrófilos bajos.
+
+Infectología:
+VIH/SIDA – Inmunosupresión viral.
+COVID‑19 – Infección respiratoria viral.
+Dengue – Virus transmitido por mosquito.
+Zika – Infección viral.
+Chikunguña – Fiebre y dolor articular.
+Malaria – Parásito transmitido por mosquito.
+Fiebre tifoidea – Infección por salmonella.
+Leptospirosis – Bacteria transmitida por agua.
+Mononucleosis – Virus Epstein‑Barr.
+Tétanos – Espasmos musculares por bacteria.
+
+Geriatría:
+Demencia – Pérdida cognitiva. 
+Fragilidad –Vulnerabilidad física.
+Sarcopenia – Pérdida muscular.
+Artrosis – Degeneración articular.
+Incontinencia fecal – Falta de control.
+Úlceras por presión – Lesiones por inmovilidad.
+Trastornos del equilibrio – Inestabilidad.
+Deshidratación – Déficit grave de líquidos. 
+Polifarmacia – Efectos adversos por muchos fármacos. 
+Hipertensión sistólica aislada – Elevación sistólica.
+
+Inmunología: 
+Anafilaxia – Reacción alérgica severa. 
+Inmunodeficiencia primaria – Fallas inmunes genéticas.
+Alergia alimentaria – Reacción inmunitaria.
+Alergia a medicamentos – Reacción adversa.
+Asma alérgica – Inflamación bronquial por alérgenos.
+Uveítis – Inflamación ocular inmune. 
+Enfermedad celíaca – Reacción al gluten.
+Angioedema – Hinchazón profunda por alergia.
+Artritis reactiva – Inflamación post infecciosa.
+Sarcoidosis – Inflamación multisistémica.

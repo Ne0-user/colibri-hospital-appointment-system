@@ -16,18 +16,12 @@ body{
 
 .wrapper{
     position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
     width: 33vw;
-    max-width: 480px;
-    height: 40vh;
-
+    height: 50vh;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,7 +93,6 @@ body{
     font-size: 1em;
     font-weight: 500;
     cursor: pointer;
-    display: block;
     text-align: center;
     text-decoration: none;
 

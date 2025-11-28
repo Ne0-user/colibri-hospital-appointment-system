@@ -20,7 +20,7 @@ class Hospital:
                     values = line.strip().split(";")
 
                     if len(values) < 9:
-                        continue  # linea inválida
+                        continue
 
                     patient = Patients(
                         name=values[0],

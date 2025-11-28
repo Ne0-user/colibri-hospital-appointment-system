@@ -1,12 +1,11 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorkSpace</title>
-    <link rel="stylesheet" href="{% static 'css/style_workspace.css' %}">
+    <title>Register New Patient</title>
+    <link rel="stylesheet" href="../static/css/style_form_new.css">
 </head>
 
 <body>
@@ -74,54 +73,12 @@
 
         <div class="main">
             <div class="box">
-                <a href="{% url 'patient_managment' %}" class="box-link">
-                    <div class="box-img">
-                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="icono">
-                    </div>
-
-                    <div class="box-info">
-                        Patient´s Management
-                    </div>
-                </a>
-
+                <div class="home_img">
+                    <div class="profile_image">
+                    <img src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?_gl=1*17t8fe1*_ga*OTczNTU2MjM2LjE3NjM0Mjc5MDU.*_ga_8JE65Q40S6*czE3NjM0Mjc5MDQkbzEkZzEkdDE3NjM0Mjc5NDgkajE2JGwwJGgw" alt="Foto recortada">
+               </div>
+                </div>
             </div>
-
-            <div class="box">
-                <a href="{% url 'doctors_managment' %}" class="box-link">
-                <div class="box-img">
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="icono">
-                </div>
-
-                <div class="box-info">
-                    Doctor´s Management
-                </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="{% url 'medical_history' %}" class="box-link">
-                <div class="box-img">
-                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1782&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="icono">
-                </div>
-
-                <div class="box-info">
-                    Medical history
-                </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="{% url 'appointments' %}" class="box-link">
-                <div class="box-img">
-                    <img src="https://images.unsplash.com/photo-1597768164194-b804b42bd61a?q=80&w=1542&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="icono">
-                </div>
-
-                <div href="{% url 'appointments' %}" class="box-info">
-                    Appointments
-                </div>
-                </a>
-            </div>
-
         </div>
 
     </div>
@@ -130,5 +87,34 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+    const allergiesList = document.getElementById("allergies-list");
+    const addAllergyBtn = document.getElementById("add-allergy");
+
+    addAllergyBtn.addEventListener("click", () => {
+        if (allergiesList.children.length >= 2) {
+            alert("For this demo you can only add 2 allergies.");
+            return;
+        }
+
+        const div = document.createElement("div");
+        div.classList.add("allergy-input");
+
+        div.innerHTML = `
+            <input type="text" placeholder="Allergy">
+            <button type="button" class="remove-allergy">X</button>
+        `;
+
+        div.querySelector(".remove-allergy").addEventListener("click", () => {
+            div.remove();
+        });
+
+        allergiesList.appendChild(div);
+    });
+</script>
+
+
+
 </body>
 </html>

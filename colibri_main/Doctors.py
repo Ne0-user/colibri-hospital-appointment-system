@@ -1,5 +1,12 @@
 from Users import User
-class Doctors(User):
-    def __init__(self, ID, name, last_name, birth_day, password,appointments,patients,speciality,rank,foto):
-        super().__init__(ID, name, last_name, birth_day, password,foto,appointments)
-        
+from structures.Sets import Set
+
+class Doctor(User):
+    def __init__(self, name, last_name, id, age, status, photo, appointments, password, rank):
+        super().__init__(name, last_name, id, age, status, photo, appointments, password)
+
+        self.rank = rank
+        self.my_patients = Set()            
+
+    def assign_patient(self, patient_id):
+        self.my_patients.add(patient_id)

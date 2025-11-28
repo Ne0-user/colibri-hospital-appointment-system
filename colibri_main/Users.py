@@ -1,10 +1,15 @@
 class User:
-    def __init__(self,ID,name,last_name,birth_day,password,foto,appointments=None):
-        self.id=ID
+    def __init__(self,name,last_name,id,age,status,photo,appointments,password,gender):
         self.name=name
         self.last_name=last_name
-        self.birth_day=birth_day
-        self.password=password
-        self.appointments = appointments if appointments is not None else []
-        
-        
+        self.id=id
+        self.age=age
+        self.status=status
+        self.appointments=appointments
+        self.__password=password
+        self.photo=photo
+    
+    def verify_password(self,password,name):
+        if self.name or self.id==name:
+            if self.__password==password:
+                return True

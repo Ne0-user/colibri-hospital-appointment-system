@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register New Patient</title>
+    <link rel="stylesheet" href="{% static 'css/style_form_new.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="head">
+                <div class="user-img">
+                    <img src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?_gl=1*17t8fe1*_ga*OTczNTU2MjM2LjE3NjM0Mjc5MDU.*_ga_8JE65Q40S6*czE3NjM0Mjc5MDQkbzEkZzEkdDE3NjM0Mjc5NDgkajE2JGwwJGgw" alt="Foto recortada">
+                </div>
+
+                <div class="user-details">
+                    <p class="title">Doctor</p>
+                    <p class="speciality">Cardiologa</p>
+                    <p class="name">Laura Lopez</p>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div class="menu">
+                    <ul class="top-menu">
+                        <li>
+                            <a href="#">
+                                <span><ion-icon name="calendar-outline"></ion-icon></span>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'workspace' %}">
+                                <span><ion-icon name="home-outline"></ion-icon></span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span><ion-icon name="calendar-outline"></ion-icon></span>
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span><ion-icon name="notifications-outline"></ion-icon></span>
+                                <span>Notifications</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="bottom-menu">
+                        <hr>
+                        <li>
+                            <a href="{% url 'login' %}">
+                                <span><ion-icon name="log-out-outline"></ion-icon></span> 
+                                <span>Log Out</span> 
+                            </a> 
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main">
+            <div class="box">
+               
+
+                <form>
+                    <div class="user-details">
+                        <div class="user-details">
+
+                        <div class="input-box">
+                            <span>Name</span>
+                            <input type="text" id="name" placeholder="Uriel">
+                        </div>
+
+                        <div class="input-box">
+                            <span>Last Name</span>
+                            <input type="text" id="Lname" placeholder="Garcia">
+                        </div>
+
+                        <div class="input-box">
+                            <span>Age</span>
+                            <input type="number" id="age" placeholder="48">
+                        </div>
+
+                        <div class="input-box">
+                            <span>Password</span>
+                            <input type="password" id="age" placeholder="password">
+                        </div>
+
+                        <div class="input-box">
+                            <span>Comfirm Password</span>
+                            <input type="password" id="age" placeholder="password">
+                        </div>
+
+                        
+                        <div class="input-box">
+                            <span>Gender</span>
+                            <select id="gender">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-box">
+                            <span>Rank</span>
+                            <select id="gender">
+                                <option value="1">Resident</option>
+                                <option value="2">Fellow</option>
+                                <option value="3">Chief of Service</option>
+                            </select>
+                        </div>
+
+                        
+                        <div class="input-box">
+                            <span>Image URL </span>
+                            <input type="url" id="imageURL" placeholder="https://example.com/photo.png">
+                        </div>
+
+                        <div class="allergies-container">
+                            <span class="title">Speciality</span>
+
+                            <div id="allergies-list"></div>
+
+                            <button type="button" id="add-allergy">Add speciality</button>
+                        </div>
+
+                        <button class="submit-btn" type="submit">Save doctor</button>
+
+
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../static/js/menu_ul.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+    const allergiesList = document.getElementById("allergies-list");
+    const addAllergyBtn = document.getElementById("add-allergy");
+
+    addAllergyBtn.addEventListener("click", () => {
+        if (allergiesList.children.length >= 2) {
+            alert("For this demo you can only add 2 specialities.");
+            return;
+        }
+
+        const div = document.createElement("div");
+        div.classList.add("allergy-input");
+
+        div.innerHTML = `
+            <input type="text" placeholder="Speciality">
+            <button type="button" class="remove-allergy">X</button>
+        `;
+
+        div.querySelector(".remove-allergy").addEventListener("click", () => {
+            div.remove();
+        });
+
+        allergiesList.appendChild(div);
+    });
+</script>
+
+
+
+</body>
+</html>

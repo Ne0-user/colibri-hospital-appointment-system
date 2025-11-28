@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="{% static 'css/style_workspace.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="head">
+                <div class="user-img">
+                    <img src="https://images.pexels.com/photos/4167541/pexels-photo-4167541.jpeg?_gl=1*17t8fe1*_ga*OTczNTU2MjM2LjE3NjM0Mjc5MDU.*_ga_8JE65Q40S6*czE3NjM0Mjc5MDQkbzEkZzEkdDE3NjM0Mjc5NDgkajE2JGwwJGgw" alt="Foto recortada">
+                </div>
+
+                <div class="user-details">
+                    <p class="title">Doctor</p>
+                    <p class="speciality">Cardiologa</p>
+                    <p class="name">Laura Lopez</p>
+                </div>
+            </div>
+
+            <div class="nav">
+                <div class="menu">
+                    <ul class="top-menu">
+                        <li>
+                            <a href="#">
+                                <span><ion-icon name="calendar-outline"></ion-icon></span>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'workspace' %}">
+                                <span><ion-icon name="home-outline"></ion-icon></span>
+                                <span>Home</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span><ion-icon name="calendar-outline"></ion-icon></span>
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <span><ion-icon name="notifications-outline"></ion-icon></span>
+                                <span>Notifications</span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <ul class="bottom-menu">
+                        <hr>
+                        <li>
+                            <a href="{% url 'login' %}">
+                                <span><ion-icon name="log-out-outline"></ion-icon></span> 
+                                <span>Log Out</span> 
+                            </a> 
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main">
+            <div class="box">
+                <a href="#" class="box-link">
+                    <div class="box-img">
+                        <img src="https://i.pinimg.com/736x/be/8d/ba/be8dba3d5657c302ea8b36b2b5ef1f55.jpg" alt="icono">
+                    </div>
+
+                    <div class="box-info">
+                        New Appointment
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="box">
+                <a href="#" class="box-link">
+                <div class="box-img">
+                    <img src="https://i.pinimg.com/736x/2c/2b/00/2c2b005dd7adf949a5822686eae6dfde.jpg" alt="icono">
+                </div>
+
+                <div class="box-info">
+                    Your appointments
+                </div>
+                </a>
+            </div>
+
+            <div class="box">
+                <a href="#" class="box-link">
+                <div class="box-img">
+                    <img src="https://i.pinimg.com/1200x/62/a1/76/62a1761b93c793f2bb0ba22d6d6eb0cf.jpg" alt="icono">
+                </div>
+
+                <div class="box-info">
+                    Prioritize Patients
+                </div>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../static/js/menu_ul.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

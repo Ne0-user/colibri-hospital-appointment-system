@@ -1,2 +1,5 @@
-Karol;Lopez;P2;20;Active;https://github.com/Ne0-user/colibri-hospital-appointment-system/actions/new;Ave;;D2;M
-Aldo;Caramin;P1;23;Active;https://github.com/Ne0-user/colibri-hospital-appointment-system/actions/new;Diego;;D2;M
+Karol;Bobaffet;P3;23;Inactive;;12345;;;M
+Aldo;Lopez;P1;22;Inactive;;D9;;;M
+Ricardo;Villanueva;P5;20;Inactive;;Vi.20;Dust;D9;M
+Aldo;Osmar;P4;123;Inactive;;1234;;;M
+Aldo;Matinez;P2;32;Inactive;;;;;M

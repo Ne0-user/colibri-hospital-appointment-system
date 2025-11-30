@@ -108,65 +108,20 @@ body{
     font-size: 60px;
 }
 
-.content{
-    flex: 1;
-    flex-direction: row;
-}
 
-.header{
-    width: 100%;
-    padding: 20px;
-    background: rgba(241, 236, 236, 0.4);
-    backdrop-filter: blur(6px);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.filters{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-.search{
-    width: auto;
-}
-
-.filters .input-box {
-    flex: 1;              
-    display: flex;
-    flex-direction: column;
-}
-
-
-.input-box {
-    display: flex;
-    flex-direction: row;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.input-box select,
-.input-box input {
-    padding: 8px;
-    font-size: 15px;
-    border-radius: 8px;
-    border: 1px solid #aaa;
-    min-width: 160px;
-}
 
 .main{
     flex: 1;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     align-content: center;
     padding: 20px;
+    flex-direction: column;
 }
+
 
 .main .box-link{
     display: flex;
@@ -176,7 +131,7 @@ body{
     height: 220px;
     background: rgba(229, 223, 223, 0.3);
     border-radius: 5%;
-    width: 220px;
+    width: 500px;
     cursor: pointer;
     transition: 0.3s, box-shadow 0.3s;;
 }
@@ -186,86 +141,45 @@ body{
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+.notifications-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
-    width: 100%;
 }
 
-
-
-.box-img{
-    border-radius: 5%;
+.notification-box {
+    width: 500px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    backdrop-filter: blur(5px);
+    transition: 0.3s ease;
 }
 
-
-.box-img img{
-    height: 150%;
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    border-radius: 10px;
+.notification-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-
-.box-info{
-    width: 100%;
-    text-align: center;
-    background: white;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    border-radius: 5%;
-}
-
-
-
-.submit-btn {
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #48b49d, #3da7a4);
-    color: white;
+.notification-title {
     font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: 0.25s;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    font-weight: 700;
+    color: #137c80;
+    margin-bottom: 5px;
 }
 
-
-.submit-btn:hover {
-    background: linear-gradient(135deg, #3da7a4, #318f86);
-    transform: translateY(-2px);
-    box-shadow: 0px 6px 12px rgba(0,0,0,0.25);
+.notification-date {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
 }
 
-.submit-btn:active {
-    transform: scale(0.98);
-}
-
-
-.box-link {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    display: inline-block;
-    text-align: left;
-}
-
-.box {
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
-}
-
-.box:hover {
-    transform: scale(1.05);
+.notification-content {
+    font-size: 15px;
+    color: #333;
+    font-weight: 400;
 }

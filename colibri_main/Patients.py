@@ -10,8 +10,3 @@ class Patients(User):
         self.Doctors=Doctors
         self.gender=gender
     
-    def change_status(self):
-        if self.status == "Active":
-            self.status = "Inactive"
-        elif self.status == "Inactive":
-            self.status = "Active"

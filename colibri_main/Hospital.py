@@ -76,8 +76,41 @@ class Hospital:
 
         self.notifications.add_notification(
             title="New Doctor",
-            description=f"The dococtor {name} {last} was succsesfully created."
+            description=f"The doctor {name} {last} was succsesfully created."
         )
+
+    def deleate_patient(self,patient):
+        patient.change_status()
+
+        if patient.status=="Inactive":
+            self.notifications.add_notification(
+            title="Pacient Inactived",
+            description=f"The patient {patient.name} {patient.last_name} was Desactivated"
+            )
+        else:
+            self.notifications.add_notification(
+            title="Pacient Activated",
+            description=f"The patient {patient.name} {patient.last_name} was Activated"
+            )
+        self.save_patients()
+        self.__load_patients()
+    
+    def deleate_doctor(self,doc):
+        doc.change_status()
+
+        if doc.status=="Inactive":
+            self.notifications.add_notification(
+            title="Pacient Inactived",
+            description=f"The patient {doc.name} {doc.last_name} was Desactivated"
+            )
+        else:
+            self.notifications.add_notification(
+            title="Pacient Activated",
+            description=f"The patient {doc.name} {doc.last_name} was Activated"
+            )
+        
+        self.save_doctors()
+        self.__load_doctors()
 
 
     def create_and_assign_patient(self, name, last, age, password, gender, photo, allergies, doctor_id):
@@ -125,8 +158,51 @@ class Hospital:
         self.save_doctors()
         self.save_patients()
     
-    def filter_doctors(self):
-        pass
+    def filter_doctors(self,fid=None,gender=None,rank=None,speciality=None):
+        if fid:
+            return [self.doctors.get(fid)]
+        ids = Set()
+        for pid in self.doctors.keys():
+            ids.add(pid)
+        
+        if gender:
+            if gender=="M":
+                ids = ids.intersection(self.doctors_mg)
+            else:
+                ids = ids.intersection(self.doctors_fg)
+        
+        if rank:
+            if rank=="Resident":
+                ids = ids.intersection(self.docr_re)
+            elif rank=="Fellow":
+                ids = ids.intersection(self.docr_fe)
+            elif rank=="Chief_of_service":
+                ids = ids.intersection(self.docr_ch)
+        
+        if speciality:
+            if speciality=="Allergy and Immunology":
+                ids = ids.intersection(self.spe_al)
+            elif speciality=="Cardiology":
+                ids = ids.intersection(self.spe_ca)
+            elif speciality=="Orthopedic Surgery":
+                ids = ids.intersection(self.spe_or)
+            elif speciality=="Dermatology":
+                ids = ids.intersection(self.spe_de)
+            elif speciality=="Pedriatrics":
+                ids = ids.intersection(self.spe_pe)
+
+        ids = ids.intersection(self.doctors_as)
+            
+        result = []
+        for pid in ids:
+            result.append(self.doctors.get(pid))
+        
+        self.__load_doctors()
+        self.__load_patients()
+
+        return result
+
+
     
     def filter_patients(self, doctor=None, gender=None, allergies=None, only_doctor=True,fid=None):
             self.__load_doctors()
@@ -222,8 +298,6 @@ class Hospital:
 
             self.doctors.put(doc.id, doc)
 
-        self.save_doctors()
-
     def save_doctors(self):
         path = os.path.join(os.path.dirname(__file__), self.txt_doctors)
 
@@ -238,12 +312,16 @@ class Hospital:
                     f"{doc.photo};{doc.password};{doc.rank};{doc.speciality};"
                     f"{doc.gender};{patients_str}\n"
                 )
+        self.__load_doctors()
 
 
 
     def __load_patients(self):
         pas = Set()
         pis=Set()
+
+        pm=Set()
+        pf=Set()
 
         try:
             path = os.path.join(os.path.dirname(__file__), self.txt_patients)
@@ -278,13 +356,16 @@ class Hospital:
 
                     
                     if patient.gender == "M":
-                        self.patients_mg.add(patient.id)
+                        pm.add(patient.id)
                     else:
-                        self.patients_fg.add(patient.id)
+                        pf.add(patient.id)
 
             
             self.patients_as = pas
             self.patients_is = pis
+
+            self.patients_fg=pf
+            self.patients_mg=pm
 
         except Exception as e:
             print("Error cargando pacientes:", e)
@@ -292,6 +373,22 @@ class Hospital:
 
 
     def __load_doctors(self):
+        das = Set()
+        dis=Set()
+
+        dm=Set()
+        df=Set()
+
+        drre=Set()
+        drfe=Set()
+        drch=Set()
+
+        dsa=Set()
+        dsc=Set()
+        dsd=Set()
+        dsp=Set()
+        dso=Set()
+        
         try:
             path = os.path.join(os.path.dirname(__file__), self.txt_doctors)
 
@@ -318,6 +415,50 @@ class Hospital:
 
                     )
                     self.doctors.put(doc.id, doc)
+
+                    if doc.status == "Active":
+                        das.add(doc.id)
+                    else:
+                        dis.add(doc.id)
+
+                    if doc.gender == "M":
+                        dm.add(doc.id)
+                    else:
+                        df.add(doc.id)
+
+                    if doc.rank == "Resident":
+                        drre.add(doc.id)
+                    elif doc.rank== "Fellow":
+                        drfe.add(doc.id)
+                    elif doc.rank== "Chief_of_Service":
+                        drch.add(doc.id)
+                    
+                    if doc.speciality=="Allergy and Immunology":
+                        dsa.add(doc.id)
+                    elif doc.speciality=="Cardiology":
+                        dsc.add(doc.id)
+                    elif doc.speciality=="Dermatology":
+                        dsd.add(doc.id)
+                    elif doc.speciality=="Pedriatrics":
+                        dsp.add(doc.id)
+                    elif doc.speciality=="Orthopedic Surgery":
+                        dso.add(doc.id)
+            
+            self.doctors_as = das
+            self.doctors_is = dis
+
+            self.doctors_fg=df
+            self.doctors_mg=dm
+
+            self.docr_re=drre
+            self.docr_fe=drfe
+            self.docr_ch=drch
+
+            self.spe_al=dsa
+            self.spe_ca=dsc
+            self.spe_pe=dsp
+            self.spe_or=dso
+            self.spe_de=dsd
 
         except FileNotFoundError:
             print("Archivo de doctores no encontrado.")

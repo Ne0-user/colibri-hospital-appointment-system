@@ -9,6 +9,12 @@ class User:
         self.__password=password
         self.photo=photo
         self.gender=gender
+
+    def change_status(self):
+        if self.status == "Active":
+            self.status = "Inactive"
+        elif self.status == "Inactive":
+            self.status = "Active"
     
     @property
     def password(self):

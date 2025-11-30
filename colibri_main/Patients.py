@@ -1,6 +1,5 @@
 from .Users import User
 from .Sets import Set
-from .Diaseases import Diasesases
 
 
 class Patients(User):

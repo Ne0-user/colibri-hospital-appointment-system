@@ -5,3 +5,4 @@ hospital = Hospital(
     txt_patients="data/patients.txt",
     txt_doctors="data/doctors.txt"
 )
+

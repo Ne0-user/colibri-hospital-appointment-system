@@ -3,6 +3,7 @@ from .Sets import Set
 from .Patients import Patients
 from .Doctors import Doctor
 from .Diaseases import Diasesases
+from .NotificationSystem import NotificationsSystem
 import os
 import random
 
@@ -12,8 +13,14 @@ class Hospital:
         self.patients = HashMap()
         self.doctors = HashMap()
 
+        self.patients_fg=Set()
+        self.patients_mg=Set()
+        self.patients_as=Set()
+        self.patients_is=Set()
+
         self.txt_patients = txt_patients
         self.txt_doctors = txt_doctors
+        self.txt_notifications="data/notifications.txt"
 
         self.data_path = os.path.join(os.path.dirname(__file__), "data")
 
@@ -21,8 +28,14 @@ class Hospital:
         self.female_names = self.__load_names("F.txt")
         self.last_names = self.__load_names("LN.txt")
 
+        self.notifications = NotificationsSystem(
+            os.path.join(os.path.dirname(__file__), self.txt_notifications)
+        )
+
+
         self.__ensure_files_exist()
         self.__load_doctors()
+        self.__load_patients()
 
         if len(self.doctors) == 0:
             self.__generate_initial_doctors()
@@ -39,15 +52,38 @@ class Hospital:
         
         return None
     
-    def create_doctor(self,name,last,age,password,gender,photo,spece):
-        pass
+    def create_doctor(self,name,last,age,password,gender,photo,spece,rank):
+        self.__load_doctors()
+        self.__load_patients()
+        new_id = f"D{len(self.doctors) + 1}"
+        doc=Doctor(
+            name=name,
+            last_name=last,
+            id=new_id,
+            age=age,
+            status="Active",
+            photo=photo,
+            appointments="",
+            password=password,
+            rank=rank,
+            speciality=spece,
+            gender=gender,
+            pacientes=None
+        )
+        self.doctors.put(new_id,doc)
+
+        self.save_doctors()
+
+        self.notifications.add_notification(
+            title="New Doctor",
+            description=f"The dococtor {name} {last} was succsesfully created."
+        )
 
 
     def create_and_assign_patient(self, name, last, age, password, gender, photo, allergies, doctor_id):
+        self.__load_doctors()
+        self.__load_patients()
         new_id = f"P{len(self.patients) + 1}"
-        allergies_set = Set()
-        for a in allergies:
-            allergies_set.add(a)
 
         
         patient = Patients(
@@ -59,7 +95,7 @@ class Hospital:
             photo=photo,
             appointments="",
             password=password,
-            allergies=allergies_set,
+            allergies=allergies,
             Doctors=doctor_id,
             gender=gender
         )
@@ -67,54 +103,76 @@ class Hospital:
        
         self.patients.put(new_id, patient)
 
+        self.notifications.add_notification(
+            title="New Patient",
+            description=f"The Patient {name} {last} was succsesfully created."
+        )
       
         if doctor_id not in self.doctors:
             raise ValueError(f"❌ Doctor {doctor_id} no existe")
 
         doctor = self.doctors.get(doctor_id)
 
+        if gender == "M":
+            self.patients_mg.add(new_id)
+        else:
+            self.patients_fg.add(new_id)
+
+        self.patients_as.add(new_id)
         
         doctor.assign_patient(new_id)
 
         self.save_doctors()
         self.save_patients()
-
-        return new_id
-
-    def filter_doctor_patients(self, doctor_id, gender=None, allergy=None):
-        if doctor_id not in self.doctors:
-            raise ValueError(f"Doctor {doctor_id} no encontrado")
-
-        doctor = self.doctors.get(doctor_id)
-
-        resultados = []
-        for pid, _ in doctor.my_patients.items():  
-            if pid not in self.patients:
-                continue 
-
-            patient = self.patients.get(pid)
-
-            if gender and patient.gender != gender:
-                continue
-
-            if allergy and not patient.allergies.contains(allergy):
-                continue
-
-            resultados.append(patient)
-
-        return resultados
     
+    def filter_doctors(self):
+        pass
     
+    def filter_patients(self, doctor=None, gender=None, allergies=None, only_doctor=True,fid=None):
+            self.__load_doctors()
+            self.__load_patients()
+            if fid:
+                return [self.patients.get(fid)]
+            ids = Set()
+
+            if only_doctor and doctor is not None:
+                base = doctor.get_my_complete_patients(self)
+                
+                for p in base:
+                    ids.add(p.id)
+            else:
+                for pid in self.patients.keys():
+                    ids.add(pid)
+
+            ids = ids.intersection(self.patients_as)
+
+            if gender:
+                if gender == "M":
+                    ids = ids.intersection(self.patients_mg)
+                else:
+                    ids = ids.intersection(self.patients_fg)
+
+
+            result = []
+            for pid in ids:
+                result.append(self.patients.get(pid))
+
+            return result
+
 
     def __ensure_files_exist(self):
         doctor_path = os.path.join(os.path.dirname(__file__), self.txt_doctors)
         patient_path = os.path.join(os.path.dirname(__file__), self.txt_patients)
+        notifications_path = os.path.join(os.path.dirname(__file__), self.txt_notifications)
 
         if not os.path.exists(doctor_path):
             open(doctor_path, "w").close()
 
         if not os.path.exists(patient_path):
             open(patient_path, "w").close()
+        
+        if not os.path.exists(notifications_path):
+            open(notifications_path, "w").close()
 
 
     def __load_names(self, file_name):
@@ -145,7 +203,7 @@ class Hospital:
 
             lastname = random.choice(self.last_names)
 
-            speciality = random.choice(["Pediatría", "Cardiología", "Trauma", "Cirugía"])
+            speciality = random.choice(["Allergy and Immunology", "Cardiology", "Dermatology", "Pediatrics","Orthopedic Surgery"])
 
             doc = Doctor(
                 name=firstname,
@@ -184,17 +242,17 @@ class Hospital:
 
 
     def __load_patients(self):
+        pas = Set()
+        pis=Set()
+
         try:
             path = os.path.join(os.path.dirname(__file__), self.txt_patients)
 
             with open(path, "r") as file:
                 for line in file:
                     values = line.strip().split(";")
-
-                    allergies = Set()
-                    if values[8]:
-                        for a in values[8].split(","):
-                            allergies.add(a)
+                    
+                    allergies = values[7].split(",") if values[7] else []
 
                     patient = Patients(
                         name=values[0],
@@ -203,17 +261,33 @@ class Hospital:
                         age=values[3],
                         status=values[4],
                         photo=values[5],
-                        appointments=values[6],
-                        password=values[7],
+                        password=values[6],
+                        appointments="",
                         allergies=allergies,
-                        Doctors="",
+                        Doctors=values[8],
                         gender=values[9]
                     )
 
                     self.patients.put(patient.id, patient)
 
-        except FileNotFoundError:
-            print("Archivo de pacientes no encontrado.")
+                    
+                    if patient.status == "Active":
+                        pas.add(patient.id)
+                    else:
+                        pis.add(patient.id)
+
+                    
+                    if patient.gender == "M":
+                        self.patients_mg.add(patient.id)
+                    else:
+                        self.patients_fg.add(patient.id)
+
+            
+            self.patients_as = pas
+            self.patients_is = pis
+
+        except Exception as e:
+            print("Error cargando pacientes:", e)
 
 
 
@@ -254,11 +328,10 @@ class Hospital:
 
         with open(path, "w", encoding="utf-8") as file:
             for _, p in self.patients.items():
-
-                allergies_str = ",".join(p.allergies.to_list()) if hasattr(p.allergies, "to_list") else ""
+                allergies_str = ",".join(p.allergies)
 
                 file.write(
                     f"{p.name};{p.last_name};{p.id};{p.age};{p.status};"
                     f"{p.photo};{p.password};{allergies_str};{p.Doctors};{p.gender}\n"
-            )
-
+                )
+        self.__load_patients()

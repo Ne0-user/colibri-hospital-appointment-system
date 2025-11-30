@@ -51,6 +51,15 @@ class Queue:
     def is_empty(self):
         return self.front == None
     
+    def to_list(self):
+        items = []
+        aux = self.front
+        while aux:
+            items.append(aux.data)
+            aux = aux.next
+        return items
+
+    
     def __repr__(self):
         current = self.front
         while current:
@@ -60,7 +69,7 @@ class Queue:
         return"\b\b "
     
     
-q=Queue([11, 22, 33, 44, 55])
+q=Queue([9,10,11, 22, 33, 44, 55,2])
 print(q)
     
     

@@ -15,7 +15,7 @@ def register_new_patient_view(request):
         comp = request.POST.get("Comp", "")
         gender = request.POST.get("gender", "")
         imageURL = request.POST.get("imageURL", "").strip()
-        allergies_list = request.POST.getlist("allergies-list")
+        allergies_list = request.POST.getlist("allergies[]")
 
         if not all([name, last_name, age, password, comp]):
             messages.error(request, "Rellena todos los campos obligatorios.")

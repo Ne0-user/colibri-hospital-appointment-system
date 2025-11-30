@@ -49,7 +49,7 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="{% url 'notifications' %}">
                                 <span><ion-icon name="notifications-outline"></ion-icon></span>
                                 <span>Notifications</span>
                             </a>
@@ -76,9 +76,9 @@
             <div class="box">
                
 
-                <form>
+                <form method="POST">
+                    {% csrf_token %}
                     <div class="user-details">
-                        <div class="user-details">
 
                         <div class="input-box">
                             <span>Name</span>
@@ -101,11 +101,10 @@
                         </div>
 
                         <div class="input-box">
-                            <span>Comfirm Password</span>
-                            <input type="password" id="age" name="Comp" placeholder="password">
+                            <span>Confirm Password</span>
+                            <input type="password" id="Comp" name="Comp" placeholder="password">
                         </div>
 
-                        
                         <div class="input-box">
                             <span>Gender</span>
                             <select id="gender" name="gender">
@@ -115,33 +114,29 @@
                             </select>
                         </div>
 
-
                         <div class="input-box">
                             <span>Rank</span>
-                            <select id="rank">
-                                <option value="1">Resident</option>
-                                <option value="2">Fellow</option>
-                                <option value="3">Chief of Service</option>
+                            <select id="rank" name="rank">
+                                <option value="Resident">Resident</option>
+                                <option value="Fellow">Fellow</option>
+                                <option value="Chief of Service">Chief of Service</option>
                             </select>
                         </div>
 
                         <div class="input-box">
                             <span>Speciality</span>
                             <select id="speciality" name="speciality">
-                                <option value="llergy and Immunology">Allergy and Immunology</option>
+                                <option value="Allergy and Immunology">Allergy and Immunology</option>
                                 <option value="Cardiology">Cardiology</option>
                                 <option value="Dermatology">Dermatology</option>
-                                <option value="	Pediatrics">Pediatrics</option>
-                                <option value="Orthopedic Surgery">Orthopedic Surgery</option>
                                 <option value="Pediatrics">Pediatrics</option>
+                                <option value="Orthopedic Surgery">Orthopedic Surgery</option>
                             </select>
                         </div>
 
-
-                        
                         <div class="input-box">
-                            <span>Image URL </span>
-                            <input type="url" id="imageURL" placeholder="https://example.com/photo.png">
+                            <span>Image URL</span>
+                            <input type="url" id="imageURL" name="imageURL" placeholder="https://example.com/photo.png">
                         </div>
 
                         <button class="submit-btn" type="submit">Save doctor</button>

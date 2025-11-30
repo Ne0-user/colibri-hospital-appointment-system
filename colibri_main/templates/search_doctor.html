@@ -5,7 +5,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deleate patient</title>
+    <title>Search doctor</title>
     <link rel="stylesheet" href="{% static 'css/style_search.css' %}">
 </head>
 
@@ -110,24 +110,25 @@
 
             <div class="main">
                 {% for p in patients %}
-                <form method="POST" action="{% url 'toggle_patient_status' %}">
-                    {% csrf_token %}
-                    <input type="hidden" name="patient_id" value="{{ p.id }}">
-                    <button type="submit" class="box-link">
-                        <div class="box">
-                            <div class="box-img">
-                                <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1782&auto=format&fit=crop" alt="patient">
-                            </div>
-                            <div class="box-info">
-                                {{ p.name }} {{ p.last_name }} <br>
-                                <strong>{{ p.id }}</strong>
-                            </div>
+                <div class="box">
+                    <a href="{% url 'patient_managment' %}?id={{ p.id }}" class="box-link">
+
+                        <div class="box-img">
+                            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1782&auto=format&fit=crop" alt="patient">
                         </div>
-                    </button>
-                </form>
+
+                        <div class="box-info">
+                            {{ p.name }} {{ p.last_name }} <br>
+                            <strong>{{ p.id }}</strong>
+                        </div>
+
+                    </a>
+                </div>
                 {% endfor %}
+
             </div>
 
+            </div>
         </div>
 
     </div>

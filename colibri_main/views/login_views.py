@@ -14,6 +14,8 @@ def login_view(request):
         if doctor:
             request.session["doctor_id"]=doctor.id
             return redirect("workspace")
+        
+
 
     return render(request, "login.html",
         {"error": "Usuario no encontrado"}) 

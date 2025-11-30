@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deleate patient</title>
-    <link rel="stylesheet" href="{% static 'css/style_search.css' %}">
+    <title>WorkSpace</title>
+    <link rel="stylesheet" href="../static/css/style_notification.css">
 </head>
 
 <body>
@@ -72,63 +72,22 @@
 
         </div>
 
-        <div class="content">
+        <div class="main">
+            <div class="notifications-container">
 
-            <header class="header">
-                <form method="POST">
-                    {% csrf_token %}
-                    <div class="filters">
-
-                        <div class="input-box">
-                            <span>ID</span>
-                            <input type="text" class="id"  name="id" placeholder="Search by ID or last name">
-                        </div>
-
-                        <div class="input-box">
-                            <span>Gender</span>
-                            <select id="gender" name="gender">
-                                <option value="M">Male</option>
-                                <option value="F">Female</option>
-                            </select>
-                        </div>
-
-                        <div class="input-box">
-                            <span>Only doctor</span>
-                            <select name="Od">
-                                <option value="True">True</option>
-                                <option value="False">False</option>
-                            </select>
-                        </div>
-
-
-                        <button class="submit-btn" type="submit">Submit</button>
+                {% for n in notifications %}
+                <div class="notification-box">
+                    <div class="notification-title">{{ n.title }}</div>
+                    <div class="notification-date">{{ n.date }}</div>
+                    <div class="notification-content">
+                        {{ n.description }}
                     </div>
-
-                </form>
-                
-            </header>
-
-            <div class="main">
-                {% for p in patients %}
-                <form method="POST" action="{% url 'toggle_patient_status' %}">
-                    {% csrf_token %}
-                    <input type="hidden" name="patient_id" value="{{ p.id }}">
-                    <button type="submit" class="box-link">
-                        <div class="box">
-                            <div class="box-img">
-                                <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1782&auto=format&fit=crop" alt="patient">
-                            </div>
-                            <div class="box-info">
-                                {{ p.name }} {{ p.last_name }} <br>
-                                <strong>{{ p.id }}</strong>
-                            </div>
-                        </div>
-                    </button>
-                </form>
+                </div>
                 {% endfor %}
-            </div>
 
+            </div>
         </div>
+
 
     </div>
 

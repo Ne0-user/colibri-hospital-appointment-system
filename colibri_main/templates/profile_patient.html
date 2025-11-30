@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deleate patient</title>
-    <link rel="stylesheet" href="{% static 'css/style_search.css' %}">
+    <title>Profile patient</title>
+    <link rel="stylesheet" href="../static/css/style_profile.css">
 </head>
 
 <body>
@@ -71,67 +71,58 @@
             </div>
 
         </div>
+        
+        <div class="main">
+            <div class="box">
+                <div class="title">
+                    <span>Profile</span>
+                </div>
 
-        <div class="content">
-
-            <header class="header">
-                <form method="POST">
-                    {% csrf_token %}
-                    <div class="filters">
-
-                        <div class="input-box">
-                            <span>ID</span>
-                            <input type="text" class="id"  name="id" placeholder="Search by ID or last name">
-                        </div>
-
-                        <div class="input-box">
-                            <span>Gender</span>
-                            <select id="gender" name="gender">
-                                <option value="M">Male</option>
-                                <option value="F">Female</option>
-                            </select>
-                        </div>
-
-                        <div class="input-box">
-                            <span>Only doctor</span>
-                            <select name="Od">
-                                <option value="True">True</option>
-                                <option value="False">False</option>
-                            </select>
-                        </div>
-
-
-                        <button class="submit-btn" type="submit">Submit</button>
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Name</span>
+                        <input type="text" value="{{ p.name }}" readonly>
                     </div>
 
-                </form>
-                
-            </header>
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" value="{{ p.last_name }}" readonly>
+                    </div>
 
-            <div class="main">
-                {% for p in patients %}
-                <form method="POST" action="{% url 'toggle_patient_status' %}">
-                    {% csrf_token %}
-                    <input type="hidden" name="patient_id" value="{{ p.id }}">
-                    <button type="submit" class="box-link">
-                        <div class="box">
-                            <div class="box-img">
-                                <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1782&auto=format&fit=crop" alt="patient">
-                            </div>
-                            <div class="box-info">
-                                {{ p.name }} {{ p.last_name }} <br>
-                                <strong>{{ p.id }}</strong>
-                            </div>
-                        </div>
-                    </button>
-                </form>
-                {% endfor %}
+                    <div class="input-box">
+                        <span class="details">ID</span>
+                        <input type="text" value="{{ p.id }}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Age</span>
+                        <input type="text" value="{{ p.age }}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Status</span>
+                        <input type="text" value="{{ p.status }}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Allergies</span>
+                        <input type="text" value="{{ p.allergies|join:', ' }}" readonly>
+                    </div>
+
+
+                    <div class="input-box">
+                        <span class="details">Doctor ID</span>
+                        <input type="text" value="{{ p.Doctors }}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Gender</span>
+                        <input type="text" value="{{ p.gender }}" readonly>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </div>
-
     <script src="../static/js/menu_ul.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

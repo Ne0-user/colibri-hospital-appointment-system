@@ -1,20 +1,20 @@
 from django.shortcuts import render, redirect
 import os
+from ..Hospital import Hospital
+from ..hospital_instance import hospital
+
 
 def login_view(request):
     if request.method == "POST":
         user = request.POST.get("user")
         password = request.POST.get("password")
 
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        txt_path = os.path.join(base_dir, "../data", "prueba.txt")
+        doctor= hospital.login_doctors(user,password)
 
-        with open(txt_path, "r", encoding="utf-8") as f:
-            for linea in f:
-                u, p = linea.strip().split(",")
-                if user == u and password == p:
-                    return redirect("workspace")
+        if doctor:
+            request.session["doctor_id"]=doctor.id
+            return redirect("workspace")
 
-        return render(request, "login.html", {"error": "Credenciales incorrectas"})
-
-    return render(request, "login.html")
+    return render(request, "login.html",
+        {"error": "Usuario no encontrado"}) 
+    

@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background: url('../Imagenes/Fondo_workspace.svg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+
+.sidebar{
+    width: 256px;
+    min-width: 230px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(19, 155, 162, 0.6);
+    padding: 24px;
+    border-radius: 20px;
+    gap: 20px;
+    
+}
+
+.sidebar .head{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+    color: azure;
+}
+
+.user-img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.user-details .title{
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.user-details .speciality{
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.user-details .name{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.menu ul li a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: azure;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    flex-direction: column;
+}
+
+.menu ul li:hover a,
+.menu ul li.active a{
+    color: #000;
+    background:rgba(220, 228, 228, 0.3);
+}
+
+.menu ul li .icon{
+    font-size: 60px;
+}
+
+
+
+.main{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.box{ 
+    width: 800px;
+    height: 800px;
+    min-height: auto;
+    background: rgba(241, 236, 236, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.box .title {
+    width: 100%;
+    margin-bottom: 30px;  
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    color: #013c52;
+}
+
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    font-size: 18px;
+}
+
+
+.input-box .details {
+    font-size: 18px;
+    font-weight: 600;
+    background: transparent;
+}
+
+
+.input-box input {
+    height: 45px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #8c8c8c;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.box {
+    width: 900px;
+    min-height: 900px;
+    padding: 40px;
+    gap: 20px;            
+}
+
+.user-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;         
+    width: 100%;
+    padding-top: 10px;
+}
+
+.section-title {
+    grid-column: span 2;
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: -10px;
+    color: #025970;
+}
+
+
+
+

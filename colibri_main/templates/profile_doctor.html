@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointments</title>
-    <link rel="stylesheet" href="{% static 'css/style_workspace.css' %}">
+    <title>Register New Patient</title>
+    <link rel="stylesheet" href="../static/css/style_profile.css">
 </head>
 
 <body>
@@ -71,49 +71,57 @@
             </div>
 
         </div>
-
+        
         <div class="main">
             <div class="box">
-                <a href="#" class="box-link">
-                    <div class="box-img">
-                        <img src="https://i.pinimg.com/736x/be/8d/ba/be8dba3d5657c302ea8b36b2b5ef1f55.jpg" alt="icono">
+                <div class="title">
+                    <span>Profile</span>
+                </div>
+
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Name</span>
+                        <input type="text" value="{{ doctor.name }}" readonly>
                     </div>
 
-                    <div class="box-info">
-                        New Appointment
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" value="{{ doctor.last_name }}" readonly>
                     </div>
-                </a>
 
+                    <div class="input-box">
+                        <span class="details">ID</span>
+                        <input type="text" value="{{ doctor.id }}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Age</span>
+                        <input type="text" value="{{ doctor.age }}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Status</span>
+                        <input type="text" value="{{ doctor.status }}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Rank</span>
+                        <input type="text" value="{{ doctor.rank }}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Speciality</span>
+                        <input type="text" value="{{ doctor.speciality }}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Gender</span>
+                        <input type="text" value="{{ doctor.gender }}" readonly>
+                    </div>
+                </div>
             </div>
-
-            <div class="box">
-                <a href="#" class="box-link">
-                <div class="box-img">
-                    <img src="https://i.pinimg.com/736x/2c/2b/00/2c2b005dd7adf949a5822686eae6dfde.jpg" alt="icono">
-                </div>
-
-                <div class="box-info">
-                    Your appointments
-                </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="#" class="box-link">
-                <div class="box-img">
-                    <img src="https://i.pinimg.com/1200x/62/a1/76/62a1761b93c793f2bb0ba22d6d6eb0cf.jpg" alt="icono">
-                </div>
-
-                <div class="box-info">
-                    Prioritize Patients
-                </div>
-                </a>
-            </div>
-
         </div>
-
     </div>
-
     <script src="../static/js/menu_ul.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

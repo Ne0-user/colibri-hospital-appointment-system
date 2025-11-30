@@ -19,8 +19,8 @@
 
                 <div class="user-details">
                     <p class="title">Doctor</p>
-                    <p class="speciality">Cardiologa</p>
-                    <p class="name">Laura Lopez</p>
+                    <p class="speciality">{{ doctor.speciality }}</p>
+                    <p class="name">{{ doctor.name }} {{ doctor.last_name }}</p>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                 <div class="menu">
                     <ul class="top-menu">
                         <li>
-                            <a href="#">
+                            <a href="{% url 'profile_doctor' %}">
                                 <span><ion-icon name="calendar-outline"></ion-icon></span>
                                 <span>Profile</span>
                             </a>
@@ -76,39 +76,40 @@
             <div class="box">
                
 
-                <form>
+                <form method="POST">
+                    {% csrf_token %}
                     <div class="user-details">
                         <div class="user-details">
 
                         <div class="input-box">
                             <span>Name</span>
-                            <input type="text" id="name" placeholder="Karol">
+                            <input type="text" id="name" name="name" placeholder="Karol">
                         </div>
 
                         <div class="input-box">
                             <span>Last Name</span>
-                            <input type="text" id="Lname" placeholder="Hernandez">
+                            <input type="text" id="Lname" name="Lname" placeholder="Hernandez">
                         </div>
 
                         <div class="input-box">
                             <span>Age</span>
-                            <input type="number" id="age" placeholder="18">
+                            <input type="number" id="age" name="age" placeholder="18">
                         </div>
 
                         <div class="input-box">
                             <span>Password</span>
-                            <input type="password" id="age" placeholder="password">
+                            <input type="password" id="password" name="password" placeholder="password">
                         </div>
 
                         <div class="input-box">
                             <span>Comfirm Password</span>
-                            <input type="password" id="age" placeholder="password">
+                            <input type="password" id="Comp" name="Comp" placeholder="password">
                         </div>
 
                         
                         <div class="input-box">
                             <span>Gender</span>
-                            <select id="gender">
+                            <select id="gender" name="gender">
                                 <option value="M">Male</option>
                                 <option value="F">Female</option>
                                 <option value="Other">Other</option>
@@ -118,7 +119,7 @@
                         
                         <div class="input-box">
                             <span>Image URL </span>
-                            <input type="url" id="imageURL" placeholder="https://example.com/photo.png">
+                            <input type="url" id="imageURL" name="imageURL" placeholder="https://example.com/photo.png">
                         </div>
 
                         <div class="allergies-container">
@@ -149,28 +150,39 @@
     const allergiesList = document.getElementById("allergies-list");
     const addAllergyBtn = document.getElementById("add-allergy");
 
+    const MAX_ALLERGIES = 2; // Límite configurable
+
     addAllergyBtn.addEventListener("click", () => {
-        if (allergiesList.children.length >= 2) {
-            alert("For this demo you can only add 2 allergies.");
+
+        if (allergiesList.children.length >= MAX_ALLERGIES) {
+            alert(`Solo se permiten ${MAX_ALLERGIES} alergias.`);
             return;
         }
 
         const div = document.createElement("div");
         div.classList.add("allergy-input");
 
-        div.innerHTML = `
-            <input type="text" placeholder="Allergy">
-            <button type="button" class="remove-allergy">X</button>
-        `;
+        // Crear input con name
+        const input = document.createElement("input");
+        input.type = "text";
+        input.placeholder = "Allergy";
+        input.name = "allergies[]";   // <-- AQUÍ LE PONES EL NAME
 
-        div.querySelector(".remove-allergy").addEventListener("click", () => {
+        const removeBtn = document.createElement("button");
+        removeBtn.type = "button";
+        removeBtn.classList.add("remove-allergy");
+        removeBtn.textContent = "X";
+
+        removeBtn.addEventListener("click", () => {
             div.remove();
         });
 
+        div.appendChild(input);
+        div.appendChild(removeBtn);
+
         allergiesList.appendChild(div);
     });
-</script>
-
+    </script>
 
 
 </body>

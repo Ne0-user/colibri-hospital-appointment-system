@@ -19,8 +19,8 @@
 
                 <div class="user-details">
                     <p class="title">Doctor</p>
-                    <p class="speciality">Cardiologa</p>
-                    <p class="name">Laura Lopez</p>
+                    <p class="speciality">{{ doctor.speciality }}</p>
+                    <p class="name">{{ doctor.name }} {{ doctor.last_name }}</p>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                 <div class="menu">
                     <ul class="top-menu">
                         <li>
-                            <a href="#">
+                            <a href="{% url 'profile_doctor' %}">
                                 <span><ion-icon name="calendar-outline"></ion-icon></span>
                                 <span>Profile</span>
                             </a>
@@ -99,7 +99,7 @@
             </div>
 
             <div class="box">
-                <a href="#" class="box-link">
+                <a href="{% url 'search_patient' %}" class="box-link">
                 <div class="box-img">
                     <img src="https://i.pinimg.com/1200x/62/a1/76/62a1761b93c793f2bb0ba22d6d6eb0cf.jpg" alt="icono">
                 </div>

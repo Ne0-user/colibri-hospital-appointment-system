@@ -19,8 +19,8 @@
 
                 <div class="user-details">
                     <p class="title">Doctor</p>
-                    <p class="speciality">Cardiologa</p>
-                    <p class="name">Laura Lopez</p>
+                    <p class="speciality">{{ doctor.speciality }}</p>
+                    <p class="name">{{ doctor.name }} {{ doctor.last_name }}</p>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                 <div class="menu">
                     <ul class="top-menu">
                         <li>
-                            <a href="#">
+                            <a href="{% url 'profile_doctor' %}">
                                 <span><ion-icon name="calendar-outline"></ion-icon></span>
                                 <span>Profile</span>
                             </a>
@@ -72,14 +72,6 @@
 
         </div>
 
-        <!--
-         <div class="warning danger">
-            <span><ion-icon name="warning-outline"></ion-icon></span>
-            <span>Warning Message</span>
-            <button type="submit" class="btn-danger"></button>
-         </div>
-
-        -->
 
         <div class="main">
             <div class="box">

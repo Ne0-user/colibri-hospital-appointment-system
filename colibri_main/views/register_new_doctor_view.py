@@ -1,5 +1,12 @@
 from django.shortcuts import render, redirect
 import os
+from ..Hospital import Hospital
+from ..hospital_instance import hospital
 
 def register_new_doctor_view(request):
-    return render(request, 'register_new_doctor.html')
+
+    doctor = hospital.doctors.get(request.session["doctor_id"])
+
+    return render(request, 'register_new_doctor.html', {
+        'doctor': doctor
+    })

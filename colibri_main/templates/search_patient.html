@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search patient</title>
-    <link rel="stylesheet" href="../static/css/style_search.css">
+    <link rel="stylesheet" href="{% static 'css/style_search.css' %}">
 </head>
 
 <body>
@@ -19,8 +19,8 @@
 
                 <div class="user-details">
                     <p class="title">Doctor</p>
-                    <p class="speciality">Cardiologa</p>
-                    <p class="name">Laura Lopez</p>
+                    <p class="speciality">{{ doctor.speciality }}</p>
+                    <p class="name">{{ doctor.name }} {{ doctor.last_name }}</p>
                 </div>
             </div>
 
@@ -28,7 +28,7 @@
                 <div class="menu">
                     <ul class="top-menu">
                         <li>
-                            <a href="#">
+                            <a href="{% url 'profile_doctor' %}">
                                 <span><ion-icon name="calendar-outline"></ion-icon></span>
                                 <span>Profile</span>
                             </a>
@@ -75,29 +75,35 @@
         <div class="content">
 
             <header class="header">
-                <div class="filters">
+                <form>
+                    <div class="filters">
 
-                    <div class="input-box">
-                        <input type="text" class="search" placeholder="Search by ID or last name">
+                        <div class="input-box">
+                            <input type="text" class="search" placeholder="Search by ID or last name">
+                        </div>
+
+                        <div class="input-box">
+                            <select id="gender" name="allergies">
+                                <option value="">Gender</option>
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                                <option value="O">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <select name="status">
+                                <option value="">Status</option>
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+
+                        <button class="submit-btn" type="submit">Submit</button>
                     </div>
 
-                    <div class="input-box">
-                        <select id="gender">
-                            <option value="">Gender</option>
-                            <option value="M">Male</option>
-                            <option value="F">Female</option>
-                            <option value="O">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="input-box">
-                        <select>
-                            <option value="">Status</option>
-                            <option value="active">Active</option>
-                            <option value="inactive">Inactive</option>
-                        </select>
-                    </div>
-                </div>
+                </form>
+                
             </header>
 
             <div class="main">

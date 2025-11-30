@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search doctor</title>
-    <link rel="stylesheet" href="{% static 'css/style_search.css' %}">
+    <title>Profile other doctor</title>
+    <link rel="stylesheet" href="../static/css/style_profile.css">
 </head>
 
 <body>
@@ -71,80 +71,57 @@
             </div>
 
         </div>
+        
+        <div class="main">
+            <div class="box">
+                <div class="title">
+                    <span>Profile</span>
+                </div>
 
-        <div class="content">
-
-            <header class="header">
-                <form method="POST">
-                    {% csrf_token %}
-                    <div class="filters">
-
-                        <div class="input-box">
-                            <span>ID</span>
-                            <input type="text" class="id"  name="id" placeholder="Search by ID">
-                        </div>
-
-                        <div class="input-box">
-                            <span>Gender</span>
-                            <select id="gender" name="gender">
-                                <option value="M">Male</option>
-                                <option value="F">Female</option>
-                            </select>
-                        </div>
-
-                        <div class="input-box">
-                            <span>Rank</span>
-                            <select name="rank">
-                                <option value="Resident">Resident</option>
-                                <option value="Fellow">Fellow</option>
-                                <option value="Chief of service">Chief of service</option>
-                            </select>
-                        </div>
-
-                        <div class="input-box">
-                            <span>Speciality</span>
-                            <select name="speciality">
-                                <option value="Allergy and Immunology">Allergy and Immunology</option>
-                                <option value="Cardiology">Cardiology</option>
-                                <option value="Dermatology">Dermatology</option>
-                                <option value="Pedriatrics">Pedriatrics</option>
-                                <option value="Orthopedic Surgery">Orthopedic Surgery</option>
-                            </select>
-                        </div>
-
-
-                        <button class="submit-btn" type="submit">Submit</button>
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Name</span>
+                        <input type="text" value="{{ d2.name }}" readonly>
                     </div>
 
-                </form>
-                
-            </header>
+                    <div class="input-box">
+                        <span class="details">Last Name</span>
+                        <input type="text" value="{{ d2.last_name }}" readonly>
+                    </div>
 
-            <div class="main">
-                {% for p in doctors %}
-                <div class="box">
-                    <a href="{% url 'profile_other_doctor' %}?id={{ p.id }}" class="box-link">
+                    <div class="input-box">
+                        <span class="details">ID</span>
+                        <input type="text" value="{{ d2.id }}" readonly>
+                    </div>
 
-                        <div class="box-img">
-                            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1782&auto=format&fit=crop" alt="patient">
-                        </div>
+                    <div class="input-box">
+                        <span class="details">Age</span>
+                        <input type="text" value="{{ d2.age }}" readonly>
+                    </div>
 
-                        <div class="box-info">
-                            {{ p.name }} {{ p.last_name }} <br>
-                            <strong>{{ p.id }}</strong>
-                        </div>
+                    <div class="input-box">
+                        <span class="details">Status</span>
+                        <input type="text" value="{{ d2.status }}" readonly>
+                    </div>
 
-                    </a>
+                    <div class="input-box">
+                        <span class="details">Rank</span>
+                        <input type="text" value="{{ d2.rank}}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Speciality</span>
+                        <input type="text" value="{{ d2.speciality}}" readonly>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Gender</span>
+                        <input type="text" value="{{ d2.gender }}" readonly>
+                    </div>
                 </div>
-                {% endfor %}
-
-            </div>
-
             </div>
         </div>
-
     </div>
-
     <script src="../static/js/menu_ul.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

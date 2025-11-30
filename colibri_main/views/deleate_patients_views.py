@@ -27,8 +27,6 @@ def deleate_patient_view(request):
     if request.method == "POST" and "patient_id" in request.POST:
         patient_id = request.POST.get("patient_id")
         patient = hospital.patients.get(patient_id)
-        patient.change_status()
-        hospital.save_patients()
 
     if request.method == "POST":
         gender = request.POST.get("gender")

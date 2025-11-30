@@ -1,0 +1,2 @@
+Karol;Lopez;P2;20;Active;https://github.com/Ne0-user/colibri-hospital-appointment-system/actions/new;Ave;;D2;M
+Aldo;Caramin;P1;23;Active;https://github.com/Ne0-user/colibri-hospital-appointment-system/actions/new;Diego;;D2;M

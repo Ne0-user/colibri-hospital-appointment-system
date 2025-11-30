@@ -1,0 +1,8 @@
+Liliana;Altamirano;D2;39;Active;none;1234;Attending;CardiologÃƒÂ­a;F;P2,P1
+Vasco;Peters;D3;43;Active;none;1234;Resident;PediatrÃƒÂ­a;M;
+Lidia;Massey;D8;53;Active;none;1234;Attending;Trauma;F;
+Marcela;Langford;D4;34;Active;none;1234;Resident;CirugÃƒÂ­a;F;
+JosÃƒÂ©;Stubbs;D10;37;Active;none;1234;Chief of Service;PediatrÃƒÂ­a;M;
+Marc;Mackenzie;D5;45;Active;none;1234;Chief of Service;CirugÃƒÂ­a;M;
+Marcelo;Snell;D6;57;Active;none;1234;Attending;PediatrÃƒÂ­a;M;
+Marcos;Jenkins;D9;32;Active;none;1234;Attending;CardiologÃƒÂ­a;M;

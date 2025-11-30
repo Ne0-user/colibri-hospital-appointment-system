@@ -1,12 +1,12 @@
 Valentina;Abrego;D7;53;Active;none;1234;Resident;Cardiology;F;
-Jordana;Moreno;D9;55;Active;none;1234;Chief of Service;Allergy and Immunology;F;P4,P2,P3,P1,P5
-Nacy;Cena;D12;34;Active;;1234;Chief of Service;Pediatrics;F;
-Uriel;Lopez;D11;54;Active;;1234;Chief of Service;Allergy and Immunology;M;
-Silvia;Vazquez;D3;48;Active;none;1234;Resident;Dermatology;F;
-Rufino;Acevedo;D1;51;Active;none;1234;Resident;Allergy and Immunology;M;
 Katherine;Nunez;D6;49;Active;none;1234;Resident;Dermatology;F;
-Adan;Vazquez;D2;30;Active;none;1234;Chief of Service;Allergy and Immunology;M;
+Silvia;Vazquez;D3;48;Active;none;1234;Resident;Dermatology;F;
+Rufino;Acevedo;D1;51;Inactive;none;1234;Resident;Allergy and Immunology;M;
+Nacy;Cena;D12;34;Active;;1234;Chief_of_Service;Pedriatrics;F;
+Uriel;Lopez;D11;54;Active;;1234;Chief_of_Service;Allergy and Immunology;M;
 Valentina;Lopez;D4;56;Active;none;1234;Resident;Dermatology;F;
-Aurora;Camacho;D8;49;Active;none;1234;Attending;Allergy and Immunology;F;
-Luis;Mason;D10;40;Active;none;1234;Resident;Cardiology;M;
 Tamara;Velazquez;D5;49;Active;none;1234;Resident;Dermatology;F;
+Adan;Vazquez;D2;30;Active;none;1234;Chief_of_Service;Allergy and Immunology;M;
+Aurora;Camacho;D8;49;Active;none;1234;Attending;Allergy and Immunology;F;
+Jordana;Moreno;D9;55;Active;none;1234;Chief_of_Service;Allergy and Immunology;F;P5,P4,P2,P3,P7,P6,P1
+Luis;Mason;D10;40;Active;none;1234;Resident;Cardiology;M;

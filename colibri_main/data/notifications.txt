@@ -20,3 +20,10 @@
 2025-11-30;New Doctor;The dococtor Nacy Cena was succsesfully created.
 2025-11-30;New Patient;The Patient Aldo Osmar was succsesfully created.
 2025-11-30;New Patient;The Patient Ricardo Villanueva was succsesfully created.
+2025-11-30;New Patient;The Patient Jorge Ganzo was succsesfully created.
+2025-11-30;New Patient;The Patient aldo Bones was succsesfully created.
+2025-11-30;Pacient Inactived;The patient Jorge Ganzo was Desactivated
+2025-11-30;Pacient Inactived;The patient aldo Bones was Desactivated
+2025-11-30;Pacient Inactived;The patient Rufino Acevedo was Desactivated
+2025-11-30;Pacient Inactived;The patient Rufino Acevedo was Desactivated
+2025-11-30;Pacient Inactived;The patient Rufino Acevedo was Desactivated

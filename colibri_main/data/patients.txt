@@ -1,5 +1,7 @@
-Karol;Bobaffet;P3;23;Inactive;;12345;;;M
-Aldo;Lopez;P1;22;Inactive;;D9;;;M
-Ricardo;Villanueva;P5;20;Inactive;;Vi.20;Dust;D9;M
 Aldo;Osmar;P4;123;Inactive;;1234;;;M
+Ricardo;Villanueva;P5;20;Inactive;;Vi.20;Dust;D9;M
 Aldo;Matinez;P2;32;Inactive;;;;;M
+Karol;Bobaffet;P3;23;Inactive;;12345;;;M
+aldo;Bones;P7;34;Inactive;;1234;Dust;D9;M
+Jorge;Ganzo;P6;22;Inactive;;1234;Cinamon,Bees;D9;M
+Aldo;Lopez;P1;22;Inactive;;D9;;;M

@@ -185,7 +185,7 @@ if __name__ == "__main__":
     m1.put("lista9", [_ for _ in range(9)])
     m1.remove("lista0")
 
-    m1.put(Void(), Niente())
+    m1.put(Void().algo, Niente())
     
     m.put("Otro mapa", m1)
     

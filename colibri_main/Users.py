@@ -8,8 +8,8 @@ class User:
         self.appointments=appointments
         self.__password=password
         self.photo=photo
+        self.gender=gender
     
-    def verify_password(self,password,name):
-        if self.name or self.id==name:
-            if self.__password==password:
-                return True
+    @property
+    def password(self):
+        return self.__password

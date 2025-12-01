@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical History</title>
-    <link rel="stylesheet" href="{% static 'css/style_workspace.css' %}">
+    <title>Search patient</title>
+    <link rel="stylesheet" href="{% static 'css/style_search.css' %}">
 </head>
 
 <body>
@@ -72,32 +72,63 @@
 
         </div>
 
-        <div class="main">
-            <div class="box">
-                <a href="{% url 'view_patient_record_filter' %}" class="box-link">
-                    <div class="box-img">
-                        <img src="https://i.pinimg.com/736x/be/8d/ba/be8dba3d5657c302ea8b36b2b5ef1f55.jpg" alt="icono">
+        <div class="content">
+
+            <header class="header">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="filters">
+
+                        <div class="input-box">
+                            <span>ID</span>
+                            <input type="text" class="id"  name="id" placeholder="Search by ID or last name">
+                        </div>
+
+                        <div class="input-box">
+                            <span>Gender</span>
+                            <select id="gender" name="gender">
+                                <option value="M">Male</option>
+                                <option value="F">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <span>Only doctor</span>
+                            <select name="Od">
+                                <option value="True">True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </div>
+
+
+                        <button class="submit-btn" type="submit">Submit</button>
                     </div>
 
-                    <div class="box-info">
-                        View a patient's medical history
-                    </div>
-                </a>
+                </form>
+                
+            </header>
+
+            <div class="main">
+                {% for p in patients %}
+                <div class="box">
+                    <a href="{% url 'add_medical_record' %}?id={{ p.id }}" class="box-link">
+
+                        <div class="box-img">
+                            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1782&auto=format&fit=crop" alt="patient">
+                        </div>
+
+                        <div class="box-info">
+                            {{ p.name }} {{ p.last_name }} <br>
+                            <strong>{{ p.id }}</strong>
+                        </div>
+
+                    </a>
+                </div>
+                {% endfor %}
 
             </div>
 
-            <div class="box">
-                <a href="{% url 'add_medical_record_filter' %}" class="box-link">
-                <div class="box-img">
-                    <img src="https://i.pinimg.com/736x/2c/2b/00/2c2b005dd7adf949a5822686eae6dfde.jpg" alt="icono">
-                </div>
-
-                <div class="box-info">
-                    Add a new medical record
-                </div>
-                </a>
             </div>
-
         </div>
 
     </div>

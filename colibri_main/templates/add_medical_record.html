@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical History</title>
-    <link rel="stylesheet" href="{% static 'css/style_workspace.css' %}">
+    <title>Register New Patient</title>
+    <link rel="stylesheet" href="{% static 'css/style_add_medical_record.css' %}">
 </head>
 
 <body>
@@ -74,30 +74,41 @@
 
         <div class="main">
             <div class="box">
-                <a href="{% url 'view_patient_record_filter' %}" class="box-link">
-                    <div class="box-img">
-                        <img src="https://i.pinimg.com/736x/be/8d/ba/be8dba3d5657c302ea8b36b2b5ef1f55.jpg" alt="icono">
+               
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="user-details">
+
+                        <div class="input-box">
+                            <span>Reason</span>
+                            <input type="text" id="name" name="Reason">
+                        </div>
+
+                        <div class="input-box big">
+                            <span>Lab Results</span>
+                            <textarea name="Lab Results" class="auto-expand"></textarea>
+                        </div>
+
+                        <div class="input-box big">
+                            <span>Treatment</span>
+                            <textarea name="Treatment" class="auto-expand"></textarea>
+                        </div>
+
+                        <div class="input-box big">
+                            <span>Follow Up</span>
+                            <textarea name="Follow-up" class="auto-expand"></textarea>
+                        </div>
+
+
+
+                        <button class="submit-btn" type="submit">Save</button>
+
+
                     </div>
-
-                    <div class="box-info">
-                        View a patient's medical history
-                    </div>
-                </a>
-
+                   
+                </form>
             </div>
-
-            <div class="box">
-                <a href="{% url 'add_medical_record_filter' %}" class="box-link">
-                <div class="box-img">
-                    <img src="https://i.pinimg.com/736x/2c/2b/00/2c2b005dd7adf949a5822686eae6dfde.jpg" alt="icono">
-                </div>
-
-                <div class="box-info">
-                    Add a new medical record
-                </div>
-                </a>
-            </div>
-
         </div>
 
     </div>
@@ -106,5 +117,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

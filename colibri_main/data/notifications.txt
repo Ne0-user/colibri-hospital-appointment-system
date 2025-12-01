@@ -27,3 +27,8 @@
 2025-11-30;Pacient Inactived;The patient Rufino Acevedo was Desactivated
 2025-11-30;Pacient Inactived;The patient Rufino Acevedo was Desactivated
 2025-11-30;Pacient Inactived;The patient Rufino Acevedo was Desactivated
+2025-11-30;New Patient;The Patient Aldo Lopez was succsesfully created.
+2025-11-30;New Note;The patient Aldo Lopez was succsesfully created.
+2025-11-30;New Note;The patient Aldo Lopez was succsesfully created.
+2025-11-30;New Note;The patient Aldo Lopez was succsesfully created.
+2025-11-30;New Note;The patient Aldo Lopez was succsesfully created.

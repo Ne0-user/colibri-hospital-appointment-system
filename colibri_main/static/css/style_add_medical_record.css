@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background: url('../Imagenes/Fondo_workspace.svg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+
+.sidebar{
+    width: 25%;
+    min-width: 230px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(19, 155, 162, 0.6);
+    padding: 24px;
+    border-radius: 20px;
+    gap: 20px;
+    
+}
+
+.sidebar .head{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+    color: azure;
+}
+
+.user-img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user-img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.user-details .title{
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.user-details .speciality{
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.user-details .name{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.menu ul li a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: azure;
+    text-decoration: none;
+    padding: 12px 8px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    flex-direction: column;
+}
+
+.menu ul li:hover a,
+.menu ul li.active a{
+    color: #000;
+    background:rgba(220, 228, 228, 0.3);
+}
+
+.menu ul li .icon{
+    font-size: 60px;
+}
+
+
+
+.main{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+.box{ 
+    width: 600px;
+    min-width: 400px;
+    height: 700px;
+    min-height: auto;
+    background: rgba(241, 236, 236, 0.4);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.box form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-details {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input-box input,
+.input-box select {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+.allergies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-allergy {
+    padding: 8px 12px;
+    border: none;
+    background: #48b49d;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#add-allergy:hover {
+    background: #3da7a4;
+}
+
+.allergy-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.allergy-input input {
+    flex: 1;
+}
+
+.remove-allergy {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #48b49d, #3da7a4);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.25s;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #3da7a4, #318f86);
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.25);
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Aumenta el tamaño general de todos los inputs */
+.input-box input,
+.input-box select,
+.input-box textarea {
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #888;
+    width: 100%;
+    min-height: 50px;
+}
+
+
+.input-box.big textarea {
+    min-height: 120px;
+    resize: none; 
+}
+
+
+.input-box {
+    width: 100%;
+    min-width: 260px;
+}
+
+.user-details {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}

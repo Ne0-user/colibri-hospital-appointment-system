@@ -201,6 +201,18 @@ class Hospital:
         self.__load_patients()
 
         return result
+    
+
+    def add_note_patient(self,patient,reason,lab,treatment,follow):
+        patient.add_note(reason,lab,treatment,follow)
+
+        self.notifications.add_notification(
+            title="New Note",
+            description=f"The patient {patient.name} {patient.last_name} was succsesfully created."
+        )
+
+        patient.save_patient_history()
+        patient.load_patient_history()
 
 
     

@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WorkSpace</title>
-    <link rel="stylesheet" href="{% static 'css/style_workspace.css' %}">
+    <title>Register New Patient</title>
+    <link rel="stylesheet" href="{% static 'css/style_add_medical_record.css' %}">
 </head>
 
 <body>
@@ -74,66 +74,40 @@
 
         <div class="main">
             <div class="box">
-                <a href="{% url 'patient_managment' %}" class="box-link">
-                    <div class="box-img">
-                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="icono">
+               
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="user-details">
+
+                        <div class="input-box">
+                            <span>Reason</span>
+                            <input type="text" id="reason" name="Reason">
+                        </div>
+
+                        <div class="input-box big">
+                            <span>Description</span>
+                            <textarea name="Description" class="auto-expand"></textarea>
+                        </div>
+
+                        <div class="input-box">
+                            <span>Priority</span>
+                            <select id="priority" name="priority">
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Urgent">Urgent</option>
+                            </select>
+                        </div>
+
+
+                        <button class="submit-btn" type="submit">Save</button>
+
+
                     </div>
-
-                    <div class="box-info">
-                        Patient´s Management
-                    </div>
-                </a>
-
+                   
+                </form>
             </div>
-
-            <div class="box">
-                <a href="{% url 'doctors_managment' %}" class="box-link">
-                <div class="box-img">
-                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="icono">
-                </div>
-
-                <div class="box-info">
-                    Doctor´s Management
-                </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="{% url 'medical_history' %}" class="box-link">
-                <div class="box-img">
-                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1782&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="icono">
-                </div>
-
-                <div class="box-info">
-                    Medical history Patients
-                </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="{% url 'medical_history' %}" class="box-link">
-                <div class="box-img">
-                    <img src="https://i.pinimg.com/736x/01/4c/08/014c08a30a417227c2d03109c0d87a10.jpg" alt="icono">
-                </div>
-
-                <div class="box-info">
-                    Medical history Doctors
-                </div>
-                </a>
-            </div>
-
-            <div class="box">
-                <a href="{% url 'appointments' %}" class="box-link">
-                <div class="box-img">
-                    <img src="https://images.unsplash.com/photo-1597768164194-b804b42bd61a?q=80&w=1542&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="icono">
-                </div>
-
-                <div href="{% url 'appointments' %}" class="box-info">
-                    Appointments
-                </div>
-                </a>
-            </div>
-
         </div>
 
     </div>
@@ -142,5 +116,6 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

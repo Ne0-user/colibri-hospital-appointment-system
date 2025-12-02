@@ -1,5 +1,10 @@
-Reason: Check
-Lab results: qwe
-Treatments: qwewq
-Follow up: wqewqe
+Reason: 4
+Lab results: 4
+Treatments: 4
+Follow up: 4
+----
+Reason: 4
+Lab results: 4
+Treatments: 4
+Follow up: 4
 ----

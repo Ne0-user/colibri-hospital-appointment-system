@@ -32,3 +32,12 @@
 2025-11-30;New Note;The patient Aldo Lopez was succsesfully created.
 2025-11-30;New Note;The patient Aldo Lopez was succsesfully created.
 2025-11-30;New Note;The patient Aldo Lopez was succsesfully created.
+2025-11-30;New Doctor;The doctor Urielito Lopez was succsesfully created.
+2025-11-30;Pacient Inactived;The patient Alfredo Reyes was Desactivated
+2025-11-30;New Note;The patient Pablo Rojo was succsesfully created.
+2025-12-01;Pacient Inactived;The patient Irene Lozano was Desactivated
+2025-12-01;New Note;The patient Diana Cano was succsesfully created.
+2025-12-01;New Note;The patient Aldo Lopez was succsesfully created.
+2025-12-01;New Note;The patient Aldo Lopez was succsesfully created.
+2025-12-01;New Note;The patient Aldo Lopez was succsesfully created.
+2025-12-01;New Note;The patient Aldo Lopez was succsesfully created.

@@ -20,7 +20,7 @@ body{
     display: flex;
 }
 
-
+/* SIDEBAR ------------------------------------------------ */
 
 .sidebar{
     width: 256px;
@@ -31,7 +31,6 @@ body{
     padding: 24px;
     border-radius: 20px;
     gap: 20px;
-    
 }
 
 .sidebar .head{
@@ -54,7 +53,6 @@ body{
     object-fit: cover;
 }
 
-
 .user-details .title{
     font-size: 10px;
     font-weight: 500;
@@ -71,7 +69,6 @@ body{
     font-size: 20px;
     font-weight: 500;
 }
-
 
 .menu {
     display: flex;
@@ -108,7 +105,7 @@ body{
     font-size: 60px;
 }
 
-
+/* MAIN ------------------------------------------------ */
 
 .main{
     flex: 1;
@@ -122,6 +119,7 @@ body{
     flex-direction: column;
 }
 
+/* BOXES ------------------------------------------------ */
 
 .main .box-link{
     display: flex;
@@ -133,7 +131,7 @@ body{
     border-radius: 5%;
     width: 500px;
     cursor: pointer;
-    transition: 0.3s, box-shadow 0.3s;;
+    transition: 0.3s, box-shadow 0.3s;
 }
 
 .main .box:hover {
@@ -141,6 +139,7 @@ body{
     box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
+/* HISTORIAL MÉDICO (usa estilo de notificaciones) -------- */
 
 .notifications-container {
     width: 100%;
@@ -182,4 +181,18 @@ body{
     font-size: 15px;
     color: #333;
     font-weight: 400;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.no-notes {
+    font-size: 18px;
+    color: #555;
+    padding: 20px;
+    background: rgba(255,255,255,0.7);
+    border-radius: 10px;
 }

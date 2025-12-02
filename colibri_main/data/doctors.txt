@@ -1,12 +1,41 @@
-Luis;Mason;D10;40;Active;none;1234;Resident;Cardiology;M;
-Tamara;Velazquez;D5;49;Active;none;1234;Resident;Dermatology;F;
-Valentina;Abrego;D7;53;Active;none;1234;Resident;Cardiology;F;
-Silvia;Vazquez;D3;48;Active;none;1234;Resident;Dermatology;F;
-Nacy;Cena;D12;34;Active;;1234;Chief_of_Service;Pedriatrics;F;
-Uriel;Lopez;D11;54;Active;;1234;Chief_of_Service;Allergy and Immunology;M;
-Valentina;Lopez;D4;56;Active;none;1234;Resident;Dermatology;F;
-Adan;Vazquez;D2;30;Active;none;1234;Chief_of_Service;Allergy and Immunology;M;
-Katherine;Nunez;D6;49;Active;none;1234;Resident;Dermatology;F;
-Rufino;Acevedo;D1;51;Inactive;none;1234;Resident;Allergy and Immunology;M;
-Aurora;Camacho;D8;49;Active;none;1234;Attending;Allergy and Immunology;F;
-Jordana;Moreno;D9;55;Active;none;1234;Chief_of_Service;Allergy and Immunology;F;P6,P8,P1,P5,P3,P4,P2,P7
+Aurora;Camacho;D11;49;Active;none;1234;Attending;Allergy and Immunology;F;P37,P31,P35
+Sergio;Pineda;D15;52;Active;none;1234;Attending;Cardiology;M;P14,P4
+Ana;Serrano;D36;52;Active;none;1234;Attending;Dermatology;F;P30,P17,P22
+Irene;Lozano;D28;38;Inactive;none;1234;Resident;Pedriatrics;F;P48,P43
+Brenda;Silva;D26;36;Active;none;1234;Resident;Dermatology;F;P30,P23,P27,P16
+Marco;Flores;D39;39;Active;none;1234;Chief_of_Service;Dermatology;M;P25,P30,P19
+Sofia;Torres;D22;50;Active;none;1234;Resident;Dermatology;F;P20,P29,P17
+Ivan;Garcia;D23;43;Inactive;none;1234;Resident;Cardiology;M;P10,P3
+Miguel;Ortega;D13;44;Active;none;1234;Resident;Cardiology;M;P15,P2,P9
+Cecilia;Mora;D30;47;Active;none;1234;Resident;Allergy and Immunology;F;P31,P40,P36
+Uriel;Lopez;D6;54;Active;none;1234;Chief_of_Service;Allergy and Immunology;M;P38,P32,P36
+Elena;Bravo;D40;48;Active;none;1234;Resident;Allergy and Immunology;F;P33,P37,P31
+Adan;Vazquez;D8;30;Active;none;1234;Chief_of_Service;Allergy and Immunology;M;P39,P33
+Laura;Medina;D34;40;Active;none;1234;Resident;Cardiology;F;P8,P14,P6,P13
+Katherine;Nunez;D9;49;Active;none;1234;Resident;Dermatology;F;P24,P28,P22
+Ramon;Cortez;D25;48;Active;none;1234;Resident;Cardiology;M;P14,P2,P11
+Valentina;Lopez;D7;56;Active;none;1234;Resident;Dermatology;F;P25,P19,P16
+Nacy;Cena;D5;34;Active;none;1234;Chief_of_Service;Pedriatrics;F;P45,P47
+Daniela;Rios;D16;46;Active;none;1234;Resident;Orthopedic Surgery;F;P23,P27,P31
+Luis;Mason;D1;40;Active;none;1234;Resident;Cardiology;M;P8,P12,P3
+Valentina;Abrego;D3;53;Active;none;1234;Resident;Cardiology;F;P10,P5
+Jordana;Moreno;D12;55;Active;none;1234;Chief_of_Service;Allergy and Immunology;F;P39,P38,P32,P36
+Alfredo;Reyes;D31;33;Inactive;none;1234;Resident;Dermatology;M;P24,P18,P28
+Silvia;Vazquez;D4;48;Active;none;1234;Resident;Dermatology;F;P18,P30,P27,P20
+Andrea;Rojas;D24;51;Active;none;1234;Attending;Allergy and Immunology;F;P33,P37
+Carla;Juarez;D14;37;Active;none;1234;Attending;Dermatology;F;P18,P26
+Pablo;Mendez;D27;45;Active;none;1234;Attending;Orthopedic Surgery;M;P25,P31,P35,P22
+Francisco;Merino;D35;37;Inactive;none;1234;Resident;Orthopedic Surgery;M;P21,P34,P29
+Rufino;Acevedo;D10;51;Inactive;none;1234;Resident;Allergy and Immunology;M;P34,P40
+Raul;Navarro;D29;42;Active;none;1234;Attending;Cardiology;M;P15,P12,P5
+Hector;Vera;D21;35;Active;none;1234;Resident;Orthopedic Surgery;M;P24,P30,P34
+Leticia;Soto;D38;43;Active;none;1234;Attending;Orthopedic Surgery;F;P23,P27,P32,P35
+Oscar;Martinez;D17;41;Active;none;1234;Resident;Cardiology;M;P6,P11
+Urielito;Lopez;D41;54;Active;;1234;Fellow;Cardiology;M;
+Tamara;Velazquez;D2;49;Active;none;1234;Resident;Dermatology;F;P29,P17,P22
+Patricia;Campos;D32;56;Active;none;1234;Chief_of_Service;Pedriatrics;F;P44,P46,P50
+Rogelio;Ibarra;D37;45;Active;none;1234;Resident;Cardiology;M;P10,P1,P9
+Lucia;Gomez;D18;39;Active;none;1234;Resident;Dermatology;F;P21,P28
+Edgar;Palma;D33;49;Active;none;1234;Attending;Allergy and Immunology;M;P39,P35
+Marisol;Paredes;D20;47;Active;none;1234;Attending;Pedriatrics;F;P49,P42
+Julio;Sanchez;D19;55;Active;none;1234;Chief_of_Service;Cardiology;M;P7,P13,P1

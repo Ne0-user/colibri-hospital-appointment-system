@@ -87,6 +87,7 @@
                         <div class="input-box">
                             <span>Gender</span>
                             <select id="gender" name="gender">
+                                <option value="All">All</option>
                                 <option value="M">Male</option>
                                 <option value="F">Female</option>
                             </select>
@@ -95,8 +96,8 @@
                         <div class="input-box">
                             <span>Only doctor</span>
                             <select name="Od">
-                                <option value="True">True</option>
                                 <option value="False">False</option>
+                                <option value="True">True</option>
                             </select>
                         </div>
 
@@ -111,7 +112,7 @@
             <div class="main">
                 {% for p in patients %}
                 <div class="box">
-                    <a href="{% url 'add_medical_record' %}?id={{ p.id }}" class="box-link">
+                    <a href="{% url 'view_patient_record' %}?id={{ p.id }}" class="box-link">
 
                         <div class="box-img">
                             <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1782&auto=format&fit=crop" alt="patient">

@@ -52,6 +52,8 @@ class Hospital:
         
         return None
     
+
+    
     def create_doctor(self,name,last,age,password,gender,photo,spece,rank):
         self.__load_doctors()
         self.__load_patients()
@@ -142,7 +144,7 @@ class Hospital:
         )
       
         if doctor_id not in self.doctors:
-            raise ValueError(f"❌ Doctor {doctor_id} no existe")
+            raise ValueError(f"Doctor {doctor_id} no existe")
 
         doctor = self.doctors.get(doctor_id)
 

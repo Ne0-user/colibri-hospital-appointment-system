@@ -1,4 +1,4 @@
-class Note:
+class Consult:
     def __init__(self, reason, lab_results, treatments, follow_up):
         self.reason = reason
         self.lab_results = lab_results

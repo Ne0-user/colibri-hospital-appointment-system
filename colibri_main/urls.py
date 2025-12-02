@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import login_views,view_patient_record_filter_view,add_medical_record_view,add_medical_record_filter_view,toggle_doctor_status,medical_history_views,register_views, search_patient_view, workspace_views,patient_managment_views,doctors_managment_views,appointments_view,register_new_patient_view,register_new_doctor_view,profile_doctor_views,notification_view,deleate_doctor_views,profile_patient_view,search_doctor_view,deleate_patients_views,toggle_patient_status,profile_other_doctor_view
+from .views import login_views,new_appointment_view,new_appointment_filter_view,view_patient_record_filter_view,view_patient_record_view,add_medical_record_view,add_medical_record_filter_view,toggle_doctor_status,medical_history_views,register_views, search_patient_view, view_patient_record_view, workspace_views,patient_managment_views,doctors_managment_views,appointments_view,register_new_patient_view,register_new_doctor_view,profile_doctor_views,notification_view,deleate_doctor_views,profile_patient_view,search_doctor_view,deleate_patients_views,toggle_patient_status,profile_other_doctor_view
 
 urlpatterns = [
     path('',login_views.login_view, name='login'),
@@ -25,4 +25,8 @@ urlpatterns = [
     path('add_medical_record_filter/', add_medical_record_filter_view.add_medical_record_filter_view, name='add_medical_record_filter'),
     path('add_medical_record/',add_medical_record_view.add_medical_record_view, name='add_medical_record'),
     path('view_patient_record_filter/',view_patient_record_filter_view.view_patient_record_filter_view, name='view_patient_record_filter'),
+    path('view_patient_record/',view_patient_record_view.view_patient_record_view, name='view_patient_record'),
+    path('new_appointment_filter/', new_appointment_filter_view.new_appointment_filter_view, name='new_appointment_filter'),
+    path('new_appointment/', new_appointment_view.new_appointment_view, name='new_appointment'),
+
 ]
